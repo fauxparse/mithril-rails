@@ -59,7 +59,7 @@
             config && config(xhr);
           };
         }
-        m.requestWithoutCSRFProtection(options);
+        return m.requestWithoutCSRFProtection(options);
       };
     }
   };
