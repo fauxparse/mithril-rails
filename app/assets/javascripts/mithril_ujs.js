@@ -88,6 +88,6 @@
         document.addEventListener(eventName, callback);
       }
     }
-    handleEvent('page:change', initMithrilUJS);
+    handleEvent('turbolinks:load', initMithrilUJS);
   }
 })(document, window, m);
