@@ -70,11 +70,6 @@
   };
 
   // Register page load & unload events
-  if ($) {
-    $(initMithrilUJS);
-  } else {
-    document.addEventListener('DOMContentLoaded', initMithrilUJS);
-  }
 
   // Turbolinks specified events
   if (typeof Turbolinks !== 'undefined') {
@@ -89,5 +84,11 @@
       }
     }
     handleEvent('turbolinks:load', initMithrilUJS);
+  } else {
+    if ($) {
+      $(initMithrilUJS);
+    } else {
+      document.addEventListener('DOMContentLoaded', initMithrilUJS);
+    }
   }
 })(document, window, m);
